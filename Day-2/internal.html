@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Internal CSS Works</title>
+
+    <style>
+        /* Apply Calibri Light font to the body */
+        body {
+            font-family: 'Calibri Light', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        /* Main content area */
+        main {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Individual content sections (columns) */
+        .content {
+            background-color: white;
+            padding: 20px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%; /* Each column takes up 30% of the space */
+        }
+
+        h2 {
+            color: #007bff;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Understanding Internal CSS</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- First Column -->
+        <section class="content">
+            <h2>What is Internal CSS?</h2>
+            <p>
+                Internal CSS refers to CSS code that is written directly within the <style> tag in the head section of an HTML document. It is used to style a webpage specifically.
+            </p>
+        </section>
+
+        <!-- Second Column -->
+        <section class="content">
+            <h2>Why Use Internal CSS?</h2>
+            <p>
+                Internal CSS is helpful when styling a single HTML page. It keeps the CSS and HTML together, making it easier to manage the styles without creating an external stylesheet. This is great for smaller projects or when you want to quickly test or apply styles.
+            </p>
+        </section>
+
+        <!-- Third Column -->
+        <section class="content">
+            <h2>How to Apply Internal CSS?</h2>
+            <p>
+                You can apply internal CSS by placing the CSS rules inside the `<style>` tag in the `<head>` section of the document. The CSS will only affect the current page where the `<style>` is included.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    
+
+</body>
+</html>

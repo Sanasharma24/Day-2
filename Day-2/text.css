@@ -1,0 +1,106 @@
+/* Global Styles */
+body {
+    font-family: 'Calibri Light', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container for centered content */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+/* 1. Text Color */
+.text-color {
+    color: #007bff; /* Blue color for text */
+}
+
+/* 2. Background Color */
+.background-color {
+    background-color: #fff9c4; /* Light Yellow background */
+}
+
+/* 3. Text Transformation */
+.text-transformation {
+    text-transform: uppercase; /* Make text uppercase */
+    color: #f44336; /* Red color */
+}
+
+/* 4. Text Indicator (Underlining) */
+.text-indicator {
+    text-decoration: underline;
+    color: #9c27b0; /* Purple color */
+}
+
+/* 5. Letter Spacing */
+.letter-spacing {
+    letter-spacing: 2px;
+    color: #4caf50; /* Green color */
+}
+
+/* 6. Line Highlight (Strikethrough) */
+.line-highlight {
+    text-decoration-line: line-through;
+    color: #795548; /* Brown color */
+}
+
+/* 7. Word Spacing */
+.word-spacing {
+    word-spacing: 8px;
+    color: #2196f3; /* Blue color */
+}
+
+/* 8. White Space (Preserved Between Lines) */
+.white-space {
+    white-space: pre-line;
+    background-color: #e8f5e9; /* Light Green background */
+}
+
+/* 9. Text Shadow */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ff5722; /* Orange color */
+}
+
+/* 10. Highlight Text Alignment */
+.highlight-text-align {
+    text-align: center;
+    background-color: #e3f2fd; /* Light Blue background */
+}
+
+/* 11. Text Direction */
+.text-direction {
+    direction: rtl;
+    color: #607d8b; /* Blue-grey color */
+}
+
+/* Hover Effect for Paragraphs */
+p:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}

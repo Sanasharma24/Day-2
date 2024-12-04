@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Product Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .category-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .category-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .category-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .category-buttons button.active {
+            background-color: #0056b3;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .category {
+            display: none;
+            margin-bottom: 40px;
+        }
+
+        .category.active {
+            display: block;
+        }
+
+        .category h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #0056b3;
+        }
+
+        .product {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .product h3 {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        .product .price {
+            color: #007bff;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .product ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            border-top: 1px solid #ddd;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="category-buttons">
+            <button onclick="showCategory('electronics')" id="btn-electronics">Electronics</button>
+            <button onclick="showCategory('furniture')" id="btn-furniture">Furniture</button>
+            <button onclick="showCategory('clothing')" id="btn-clothing">Clothing</button>
+        </div>
+    </header>
+    <main>
+        <section id="electronics" class="category">
+            <h2>Electronics</h2>
+            <div class="product">
+                <h3>Smartphone</h3>
+                <p class="price">$699.99</p>
+                <p>A powerful smartphone with a sleek design.</p>
+                <ul>
+                    <li>6.5-inch display</li>
+                    <li>128GB storage</li>
+                    <li>Triple-lens camera</li>
+                </ul>
+            </div>
+            <div class="product">
+                <h3>Wireless Earbuds</h3>
+                <p class="price">$199.99</p>
+                <p>Crystal-clear sound with noise cancellation.</p>
+                <ul>
+                    <li>Bluetooth 5.0</li>
+                    <li>10-hour battery life</li>
+                    <li>Compact charging case</li>
+                </ul>
+            </div>
+        </section>
+        <section id="furniture" class="category">
+            <h2>Furniture</h2>
+            <div class="product">
+                <h3>Modern Sofa</h3>
+                <p class="price">$999.99</p>
+                <p>Comfort meets style in this modern sofa.</p>
+                <ul>
+                    <li>Seats 3-4 people</li>
+                    <li>Available in multiple colors</li>
+                    <li>Durable fabric material</li>
+                </ul>
+            </div>
+            <div class="product">
+                <h3>Wooden Dining Table</h3>
+                <p class="price">$599.99</p>
+                <p>Elegant dining table crafted from solid wood.</p>
+                <ul>
+                    <li>Seats up to 6 people</li>
+                    <li>Scratch-resistant finish</li>
+                    <li>Includes matching chairs</li>
+                </ul>
+            </div>
+        </section>
+        <section id="clothing" class="category">
+            <h2>Clothing</h2>
+            <div class="product">
+                <h3>Men's Jacket</h3>
+                <p class="price">$149.99</p>
+                <p>Stay warm and stylish this winter.</p>
+                <ul>
+                    <li>Water-resistant material</li>
+                    <li>Available in S, M, L, XL</li>
+                    <li>Fleece-lined interior</li>
+                </ul>
+            </div>
+            <div class="product">
+                <h3>Women's Dress</h3>
+                <p class="price">$89.99</p>
+                <p>Perfect for formal occasions or casual outings.</p>
+                <ul>
+                    <li>Available in multiple sizes</li>
+                    <li>Lightweight, breathable fabric</li>
+                    <li>Easy to wash</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 E-Shop. All rights reserved.</p>
+    </footer>
+    <script>
+        function showCategory(categoryId) {
+            const categories = document.querySelectorAll('.category');
+            const buttons = document.querySelectorAll('.category-buttons button');
+            categories.forEach(category => category.classList.remove('active'));
+            buttons.forEach(button => button.classList.remove('active'));
+            document.getElementById(categoryId).classList.add('active');
+            document.getElementById(`btn-${categoryId}`).classList.add('active');
+        }
+        // Show the first category by default
+        showCategory('electronics');
+    </script>
+</body>
+</html>

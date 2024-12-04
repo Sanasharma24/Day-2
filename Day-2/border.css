@@ -1,0 +1,41 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efb0f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container to hold the images */
+.image-container {
+    position: relative;
+    width: 80%;
+    height: 80%;
+}
+
+/* Common image styling */
+.image {
+    position: absolute;
+    width: 200px; /* Width of the images */
+    height: 200px; /* Height of the images */
+    object-fit: cover;
+    border: 5px solid #333; /* Border for both images */
+    border-radius: 10px; /* Rounded corners for the borders */
+}
+
+/* Position the first image diagonally */
+.image1 {
+    top: 20%; /* 20% from the top */
+    left: 10%; /* 10% from the left */
+}
+
+/* Position the second image diagonally */
+.image2 {
+    bottom: 20%; /* 20% from the bottom */
+    right: 10%; /* 10% from the right */
+}
